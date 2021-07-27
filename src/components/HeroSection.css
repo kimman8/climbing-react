@@ -43,3 +43,27 @@ video {
 .play {
   margin-left: 4px;
 }
+
+@media screen and (max-width: 960px) {
+  .hero-container > h1 {
+    font-size: 70px;
+    margin-top: -150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container > h1 {
+    font-size: 50px;
+    margin-top: -190px;
+  }
+  .hero-container > p {
+    font-size: 25px;
+  }
+  .btn-mobile {
+    display: block;
+    text-decoration: none;
+  }
+  .btn {
+    width: 100%;
+  }
+}
