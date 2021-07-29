@@ -9,8 +9,8 @@ const HeroSection = () => {
   return (
     <div className="hero-container">
       <video src={vid} autoPlay loop muted />
-      <h1>Adventure Awaits</h1>
-      <p>What ya waiting for?!</p>
+      <h1>Cordless and Proud</h1>
+      <p>Praise be to the stone</p>
       <div className="hero-btns">
         <Button
           className="btn"

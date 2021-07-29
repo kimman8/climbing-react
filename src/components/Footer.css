@@ -1,0 +1,29 @@
+.footer-container {
+  background-color: #242424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 0rem 2rem 0rem;
+}
+
+.footer-subscription {
+  color: #fff;
+  text-align: center;
+}
+
+.footer-subscription-heading {
+  margin-bottom: 0.5rem;
+}
+.footer-subscription-text {
+  margin-bottom: 0.5rem;
+}
+.input-areas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-input {
+  padding: 0.5rem 2rem;
+  margin-right: 0.5rem;
+}
