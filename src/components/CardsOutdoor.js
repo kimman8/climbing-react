@@ -1,8 +1,9 @@
 import React from "react";
 import "./Cards.css";
 import CardItem from "./CardItem";
+import { Modal } from "./Modal";
 
-const CardsOutdoor = () => {
+const CardsOutdoor = ({ showModal, setShowModal }) => {
   return (
     <div className="cards">
       <h1>
@@ -74,6 +75,8 @@ const CardsOutdoor = () => {
             />
           </ul>
         </div>
+        <Modal showModal={showModal} setShowModal={setShowModal} />
+        <h1>jho</h1>
       </div>
     </div>
   );
