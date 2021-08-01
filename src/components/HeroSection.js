@@ -8,7 +8,7 @@ import { AiFillPlayCircle } from "react-icons/ai";
 const HeroSection = () => {
   return (
     <div className="hero-container">
-      <video src={vid} autoPlay loop muted />
+      {/* <video src={vid} autoPlay loop muted /> */}
       <h1>Cordless and Proud</h1>
       <p>Praise be to the stone</p>
       <div className="hero-btns">
