@@ -6,8 +6,8 @@ const CardsGear = () => {
   return (
     <div className="cards">
       <h1>
-        Bouldering is the art of doing something pointless as difficultly as
-        possible!
+        Money can not buy you happiness, but it can buy you lots of climbing
+        gear and that's pretty damn close.
       </h1>
       <div className="cards__container">
         <div className="cards__wrapper">
@@ -17,6 +17,12 @@ const CardsGear = () => {
               text="Give your used rope a second life!"
               label="Recycle"
               path="/gear"
+            />
+            <CardItem
+              src={require("../images/8BAJ.jpeg").default}
+              text="Effortless chalking up!"
+              label="8B+ AJ"
+              path="/indoor"
             />
             <CardItem
               src={require("../images/moonboard1.jpeg").default}
@@ -41,7 +47,7 @@ const CardsGear = () => {
             <CardItem
               src={require("../images/evolvShaman.png").default}
               text="Aggressively downturned shoes"
-              label="Evolv!"
+              label="VEGAN"
               path="/indoor"
             />
           </ul>
@@ -50,6 +56,12 @@ const CardsGear = () => {
               src={require("../images/tokyo-powder-black-330g.jpeg").default}
               text="The Best Chalk"
               label="Chalk"
+              path="/indoor"
+            />
+            <CardItem
+              src={require("../images/FAZACHAOS.jpeg").default}
+              text="Let the friction be with you in a world where Up and Down are just a matter of perspective!"
+              label="BRUSH"
               path="/indoor"
             />
             <CardItem

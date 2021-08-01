@@ -6,17 +6,17 @@ const CardsOutdoor = () => {
   return (
     <div className="cards">
       <h1>
-        Bouldering is the art of doing something pointless as difficultly as
-        possible!
+        “The best part of climbing is when it all clicks and gravity ceases to
+        exist.” – Chris Sharma
       </h1>
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
             <CardItem
-              src={require("../images/climbingLED.jpeg").default}
-              text="LED time lapse mountain"
-              label="LED"
-              path="/indoor"
+              src={require("../images/chrisSharmaWallpaper.jpeg").default}
+              text="Chris Sharma"
+              label="Legend"
+              path="/outdoor"
             />
             <CardItem
               src={require("../images/alex-honnold.jpeg").default}
@@ -47,6 +47,20 @@ const CardsOutdoor = () => {
           </ul>
           <ul className="cards__items">
             <CardItem
+              src={require("../images/climbingLED.jpeg").default}
+              text="LED time lapse mountain"
+              label="LED"
+              path="/indoor"
+            />
+            <CardItem
+              src={require("../images/Midtbo_Thors-Hammer_Cover.jpeg").default}
+              text="Magnus Midtbo"
+              label="Magnus"
+              path="/indoor"
+            />
+          </ul>
+          <ul className="cards__items">
+            <CardItem
               src={require("../images/geometricAesthetics.jpeg").default}
               text="Geometric Aesthetics"
               label="aesthetics"
@@ -56,20 +70,6 @@ const CardsOutdoor = () => {
               src={require("../images/mapleBridgeOregon.jpeg").default}
               text="Maple Bridge Oregon"
               label="bridge"
-              path="/indoor"
-            />
-          </ul>
-          <ul className="cards__items">
-            <CardItem
-              src={require("../images/chrisSharmaWallpaper.jpeg").default}
-              text="Chris Sharma"
-              label="Legend"
-              path="/outdoor"
-            />
-            <CardItem
-              src={require("../images/Midtbo_Thors-Hammer_Cover.jpeg").default}
-              text="Magnus Midtbo"
-              label="Magnus"
               path="/indoor"
             />
           </ul>
