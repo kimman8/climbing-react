@@ -9,7 +9,7 @@
 .indoor,
 .gear,
 .outdoor,
-.sign-up {
+.signup {
   display: flex;
   height: 100vh;
   align-items: center;
@@ -18,7 +18,7 @@
 }
 
 .indoor {
-  background-image: url("./images/climbing-rope.jpeg");
+  background-image: url("./images/tomoaBoulder.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,25 +27,25 @@
 }
 
 .outdoor {
-  background-image: url("./images/img-1.jpg");
+  background-image: url("./images/alexMegos4.jpeg");
   background-position: center;
-  background-size: fill;
+  background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
 }
 
 .gear {
-  background-image: url("./images/img-8.jpg");
+  background-image: url("./images/Beastmaker-1000.jpeg");
   background-position: center;
-  background-size: fill;
+  background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
 }
 
-.sign-up {
-  background-image: url("./images/img-8.jpg");
+.signup {
+  background-image: url("./images/climbingComp.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
