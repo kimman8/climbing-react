@@ -66,6 +66,7 @@ const CardsOutdoor = ({ showModal, setShowModal }) => {
               text="Geometric Aesthetics"
               label="aesthetics"
               path="/indoor"
+              key="hi"
             />
             <CardItem
               src={require("../images/mapleBridgeOregon.jpeg").default}
@@ -76,7 +77,6 @@ const CardsOutdoor = ({ showModal, setShowModal }) => {
           </ul>
         </div>
         <Modal showModal={showModal} setShowModal={setShowModal} />
-        <h1>jho</h1>
       </div>
     </div>
   );

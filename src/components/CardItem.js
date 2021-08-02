@@ -8,11 +8,16 @@ function CardItem(props) {
     setShowModal((prev) => !prev);
     console.log("opening modal");
   };
+  const [currentCard, setCurrentCard] = useState(null);
+  const handleClick = (e) => {
+    console.log(e.target.key);
+    setCurrentCard(e.target.src);
+  };
   return (
     <Fragment>
       <li className="cards__item" onClick={openModal}>
         {/* <Link className="cards__item__link" to={props.path}> */}
-        <div className="cards__item__link">
+        <div className="cards__item__link" onClick={handleClick}>
           <figure className="cards__item__pic-wrap" data-category={props.label}>
             <img
               src={props.src}
@@ -26,7 +31,14 @@ function CardItem(props) {
         </div>
         {/* </Link> */}
       </li>
-      <Modal showModal={showModal} setShowModal={setShowModal} />
+      {showModal && (
+        <Modal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          setCurrentCard={setCurrentCard}
+          currentCard={currentCard}
+        />
+      )}
     </Fragment>
   );
 }

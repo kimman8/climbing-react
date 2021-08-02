@@ -3,7 +3,12 @@ import { MdClose } from "react-icons/md";
 import someImage from "../images/chrisSharmaWallpaper.jpeg";
 
 import styled from "styled-components";
+
+//CLIMBING
+
 export const Background = styled.div`
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
@@ -11,17 +16,18 @@ export const Background = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 20;
 `;
 export const ModalWrapper = styled.div`
   width: 800px;
-  height: 500px;
+  height: 800px;
   background: #fff;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   color: #000;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   position: relative;
-  z-index: 999;
+  z-index: 10;
   border-radius: 10px;
 `;
 
@@ -45,7 +51,7 @@ export const ModalContent = styled.div`
 export const ModalImg = styled.img`
   width: 100%;
   height: 100%;
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px 10px 0 0;
   background: #000;
 `;
 export const CloseModalButton = styled(MdClose)`
@@ -62,21 +68,21 @@ export const Modal = ({ showModal, setShowModal }) => {
   return (
     <Fragment>
       {showModal ? (
-        // <Background>
-        <ModalWrapper showModal={showModal}>
-          <ModalImg src={someImage} alt="climber" />
-          <ModalContent>
-            <h1>Are you ready?</h1>
-            <p>Get exclusive content for our next launch</p>
-            <button>Join Now</button>
-          </ModalContent>
-          <CloseModalButton
-            aria-label="Close modal"
-            onClick={() => setShowModal((prev) => !prev)}
-          />
-        </ModalWrapper>
-      ) : // </Background>
-      null}
+        <Background>
+          <ModalWrapper showModal={showModal}>
+            <ModalImg src={someImage} alt="climber" />
+            <ModalContent>
+              <h1>Are you ready?</h1>
+              <p>Get exclusive content for our next launch</p>
+              <button>Join Now</button>
+            </ModalContent>
+            <CloseModalButton
+              aria-label="Close modal"
+              onClick={() => setShowModal((prev) => !prev)}
+            />
+          </ModalWrapper>
+        </Background>
+      ) : null}
     </Fragment>
   );
 };
