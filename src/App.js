@@ -4,6 +4,15 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./components/pages/Home";
 const App = () => {
+  const threeFive = () => {
+    let sum = 0;
+    while (i < 1000) {
+      if (i % 3 === 0 || i % 5 === 0) {
+        sum += i;
+      }
+      i++;
+    }
+  };
   return (
     <Fragment>
       <Router>

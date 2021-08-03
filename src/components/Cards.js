@@ -8,7 +8,12 @@ const Cards = () => {
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
-            <CardItem />
+            <CardItem
+              src="images/img-9.jpg"
+              text="explore the hidden waterfall deep inside the amazon jungle"
+              label="adventure"
+              path="/indoor"
+            />
           </ul>
         </div>
       </div>
