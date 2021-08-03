@@ -2,7 +2,6 @@ import React from "react";
 import { Button } from "./Button";
 import "./HeroSection.css";
 import "../App.css";
-import vid from "../videos/video-2.mp4";
 import { AiFillPlayCircle } from "react-icons/ai";
 
 const HeroSection = () => {
@@ -24,9 +23,9 @@ const HeroSection = () => {
   };
   return (
     <div className="hero-container">
-      <video src={vid} autoPlay loop muted />
-      <h1>Adventure Awaits</h1>
-      <p>What ya waiting for?!</p>
+      {/* <video src={vid} autoPlay loop muted /> */}
+      <h1>Cordless and Proud</h1>
+      <p>Praise be to the stone</p>
       <div className="hero-btns">
         <Button
           className="btn"
