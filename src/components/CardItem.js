@@ -1,27 +1,31 @@
 import React, { Fragment, useState } from "react";
 // import { Link } from "react-router-dom";
 import "./Cards.css";
+import { GlobalStyle } from "./globalStyles";
+
 import { Modal } from "./Modal";
 function CardItem(props) {
   const [showModal, setShowModal] = useState(false);
-  const openModal = () => {
+  const openModal = (e) => {
     setShowModal((prev) => !prev);
+    setCurrentImg(e.target.src);
+    setCurrentText(e.target.alt);
     console.log("opening modal");
   };
   const [currentImg, setCurrentImg] = useState(null);
   const [currentText, setCurrentText] = useState(null);
-  const handleClick = (e) => {
-    console.log(e.target.src);
-    console.log(e.target.text);
-    console.log(e.target);
-    setCurrentImg(e.target.src);
-    setCurrentText(e.target.alt);
-  };
+  // const handleClick = (e) => {
+  //   console.log(e.target.src);
+  //   console.log(e.target.text);
+  //   console.log(e.target);
+  //   setCurrentImg(e.target.src);
+  //   setCurrentText(e.target.alt);
+  // };
   return (
     <Fragment>
-      <li className="cards__item" onClick={handleClick}>
+      <li className="cards__item" onClick={openModal}>
         {/* <Link className="cards__item__link" to={props.path}> */}
-        <div className="cards__item__link" onClick={openModal}>
+        <div className="cards__item__link">
           <figure className="cards__item__pic-wrap" data-category={props.label}>
             <img
               src={props.src}
@@ -36,18 +40,19 @@ function CardItem(props) {
         {/* </Link> */}
       </li>
       {showModal && (
-        <Modal
-          showModal={showModal}
-          setShowModal={setShowModal}
-          setCurrentImg={setCurrentImg}
-          currentImg={currentImg}
-          setCurrentText={setCurrentText}
-          currentText={currentText}
-        />
+        <div>
+          <Modal
+            showModal={showModal}
+            setShowModal={setShowModal}
+            setCurrentImg={setCurrentImg}
+            currentImg={currentImg}
+            setCurrentText={setCurrentText}
+            currentText={currentText}
+          />
+          <GlobalStyle />
+        </div>
       )}
     </Fragment>
   );
 }
 export default CardItem;
-
-//1:06 YT

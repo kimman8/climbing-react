@@ -76,7 +76,7 @@ const CardsOutdoor = ({ showModal, setShowModal }) => {
             />
           </ul>
         </div>
-        <Modal showModal={showModal} setShowModal={setShowModal} />
+        {/* <Modal showModal={showModal} setShowModal={setShowModal} /> */}
       </div>
     </div>
   );
