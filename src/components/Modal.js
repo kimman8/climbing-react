@@ -17,8 +17,8 @@ export const Background = styled.div`
   z-index: 20;
 `;
 export const ModalWrapper = styled.div`
-  width: 800px;
-  height: 800px;
+  width: 900px;
+  height: 900px;
   background: #fff;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   color: #000;
@@ -47,14 +47,15 @@ export const ModalWrapper = styled.div`
 //   }
 // `;
 export const ModalImg = styled.img`
-  width: 100%;
-  height: 100%;
+  max-width: 1000px;
+  max-height: 1000px;
   border-radius: 10px;
   background: #000;
+  // z-index: 30;
 `;
 export const CloseModalButton = styled(MdClose)`
   cursor: pointer;
-  color: red;
+  color: #dc143c;
   position: absolute;
   top: 20px;
   right: 20px;
@@ -62,12 +63,16 @@ export const CloseModalButton = styled(MdClose)`
   height: 32px;
   padding: 0;
   z-index: 10;
+
+  :hover& {
+    color: #ff6347;
+  }
 `;
 export const Modal = ({ showModal, setShowModal, currentImg, currentText }) => {
   const modalRef = useRef();
   const animation = useSpring({
     config: {
-      duration: 850,
+      duration: 250,
     },
     opacity: showModal ? 1 : 0,
     transform: showModal ? `translateY(0%)` : `translateY(-100%)`,
@@ -95,13 +100,13 @@ export const Modal = ({ showModal, setShowModal, currentImg, currentText }) => {
       {showModal ? (
         <Background ref={modalRef} onClick={closeModal}>
           <animated.div style={animation}>
-            <ModalWrapper>
-              <ModalImg src={currentImg} alt="climber" />
-              <CloseModalButton
-                aria-label="Close modal"
-                onClick={() => setShowModal((prev) => !prev)}
-              />
-            </ModalWrapper>
+            {/* <ModalWrapper> */}
+            <ModalImg src={currentImg} alt="climber" />
+            <CloseModalButton
+              aria-label="Close modal"
+              onClick={() => setShowModal((prev) => !prev)}
+            />
+            {/* </ModalWrapper> */}
           </animated.div>
         </Background>
       ) : null}
