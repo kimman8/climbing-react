@@ -1,6 +1,6 @@
-import React from "react";
-import "../../App.css";
+import React from 'react';
+import '../../App.css';
 
 export default function Signup() {
-  return <h1 className="signup">Signup</h1>;
+  return <h1 className='signup'>Sign Up</h1>;
 }

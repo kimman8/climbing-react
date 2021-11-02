@@ -5,7 +5,7 @@ import CardItem from "./CardItem";
 const CardsIndoor = () => {
   return (
     <div className="cards">
-      <h1>
+      <h1> 
         Bouldering is the art of doing something pointless as difficultly as
         possible!
       </h1>
