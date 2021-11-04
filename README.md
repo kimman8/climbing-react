@@ -6,4 +6,4 @@ This website was built with React Hooks and React Router. It is also fully respo
 * How to use React Hooks and React Router
 * How to make a website fully responsive
 * How to use styled-components
-* 
+
